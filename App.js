@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Button } from "react-native";
 import { Navigation } from "react-native-navigation";
+
 import List from "./List";
 
 export default class App extends Component {
-  pushNewScreen = () => {
+  pushScreen = () => {
     Navigation.push(this.props.componentId, {
       component: {
         name: "list",
         options: {
-          topBar: { title: { text: "hello" } },
           bottomTabs: { visible: false, drawBehind: true }
         }
       }
@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button title="Push new" onPress={this.pushNewScreen} />
+        <Button title="Push new" onPress={this.pushScreen} />
         <List />
       </View>
     );
