@@ -1,7 +1,10 @@
 import { Navigation } from "react-native-navigation";
-import App from "./App";
 
-Navigation.registerComponent("navigation.playground.WelcomeScreen", () => App);
+import App from "./App";
+import List from "./List";
+
+Navigation.registerComponent("app", () => App);
+Navigation.registerComponent("list", () => List);
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
@@ -13,7 +16,7 @@ Navigation.events().registerAppLaunchedListener(() => {
               children: [
                 {
                   component: {
-                    name: "navigation.playground.WelcomeScreen",
+                    name: "app",
                     options: { bottomTab: { text: "Messages" } }
                   }
                 }
@@ -22,19 +25,19 @@ Navigation.events().registerAppLaunchedListener(() => {
           },
           {
             component: {
-              name: "navigation.playground.WelcomeScreen",
+              name: "app",
               options: { bottomTab: { text: "Home" } }
             }
           },
           {
             component: {
-              name: "navigation.playground.WelcomeScreen",
+              name: "app",
               options: { bottomTab: { text: "Feed" } }
             }
           },
           {
             component: {
-              name: "navigation.playground.WelcomeScreen",
+              name: "app",
               options: { bottomTab: { text: "Store" } }
             }
           }
