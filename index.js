@@ -34,12 +34,6 @@ Navigation.events().registerAppLaunchedListener(() => {
               name: "app",
               options: { bottomTab: { text: "Feed" } }
             }
-          },
-          {
-            component: {
-              name: "app",
-              options: { bottomTab: { text: "Store" } }
-            }
           }
         ]
       }
